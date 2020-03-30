@@ -1,0 +1,19 @@
+.table-accounts {
+  margin-top: 20px;
+  box-shadow: #6c34c0 -3px 3px 0px 2px;
+  text-align: center;
+}
+
+.table-accounts thead {
+  font-weight: bold;
+}
+
+.list-accounts {
+  background-color: whitesmoke;
+}
+
+.no-accounts {
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+}

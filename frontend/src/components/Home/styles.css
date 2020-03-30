@@ -1,0 +1,41 @@
+.home-cointainer {
+  width: 40%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-title {
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #6c34c0;
+}
+
+.btn-transaction {
+  float: right;
+  margin-right: 20px;
+}
+
+.btn-deposit {
+  float: right;
+}
+
+button.btn:disabled {
+  cursor: not-allowed;
+}
+
+.swal2-confirm {
+  margin-right: 20px;
+}
+
+.swal2-title {
+  margin-bottom: 20px !important;
+}
+
+.swal2-timer-progress-bar {
+  background: #6c34c0 !important;
+}
