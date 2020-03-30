@@ -1,6 +1,6 @@
-# MoneyTracker
+# Money Tracker App (server)
 
-To start your Phoenix server:
+To start your the app server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
