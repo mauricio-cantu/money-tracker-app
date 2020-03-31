@@ -16,10 +16,6 @@ defmodule MoneyTrackerWeb.TransationControllerTest do
     account
   end
 
-  # setup %{conn: conn} do
-  #   {:ok, conn: put_req_header(conn, "accept", "application/json")}
-  # end
-
   describe "create transaction" do
     test "create transaction when data is valid", %{conn: conn} do
       account_from = fixture()
