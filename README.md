@@ -11,7 +11,7 @@ App to manage money accounts (create accounts, transactions and deposits).
 
 ### Set up the server
 
-  * cd into `api`
+  * `cd` into `api`
   * install dependencies with `mix deps.get`
   * `docker-compose up db` to set up the container containing a MySQL instance
   * `mix ecto.setup` to set up the database
@@ -19,7 +19,7 @@ App to manage money accounts (create accounts, transactions and deposits).
   
 ### Set up the react app
 
-  * cd into `frontend`
+  * `cd` into `frontend`
   * install dependencies with `yarn install` or `npm install`
   * `yarn start` or `npm start` to run the app (it will be running at [`http://localhost:3000`](http://localhost:3000))
 
