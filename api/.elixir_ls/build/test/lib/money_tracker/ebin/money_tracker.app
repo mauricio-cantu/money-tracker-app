@@ -18,7 +18,6 @@
                         'Elixir.MoneyTrackerWeb.Endpoint',
                         'Elixir.MoneyTrackerWeb.ErrorHelpers',
                         'Elixir.MoneyTrackerWeb.ErrorView',
-                        'Elixir.MoneyTrackerWeb.FallbackController',
                         'Elixir.MoneyTrackerWeb.Gettext',
                         'Elixir.MoneyTrackerWeb.Router',
                         'Elixir.MoneyTrackerWeb.Router.Helpers',
