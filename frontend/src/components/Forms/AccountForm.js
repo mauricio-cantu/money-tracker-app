@@ -36,9 +36,7 @@ export default function AccountForm(props) {
       props.setOpenModalAccount()
     } catch (err) {
       props.swal.fire({
-        title: !err.response
-          ? 'Network error.'
-          : 'Something went wrong creating the account.',
+        title: !err.response ? 'Network error.' : err.response.data.message,
         icon: 'error'
       })
     }
