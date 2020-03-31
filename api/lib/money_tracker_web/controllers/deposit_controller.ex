@@ -14,11 +14,17 @@ defmodule MoneyTrackerWeb.DepositController do
     case Web.create_deposit(account, value) do
       {:ok, message} ->
         conn
-        |> send_resp(:ok, Jason.encode!(%{message: message}))
+        |> put_status(:created)
+        |> json(%{message: message})
+
+      # send_resp(conn, :ok, Jason.encode!(%{message: message}))
 
       {:error, message} ->
         conn
-        |> send_resp(:unprocessable_entity, Jason.encode!(%{message: message}))
+        |> put_status(:unprocessable_entity)
+        |> json(%{message: message})
+
+        # send_resp(conn, :unprocessable_entity, Jason.encode!(%{message: message}))
     end
   end
 end

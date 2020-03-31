@@ -14,7 +14,7 @@ config :money_tracker,
 config :money_tracker, MoneyTrackerWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "v8A5XeapjukHXLd/WYkjqExw6mC4kSd1fWs+wnqbi5zm34BggnnfKEOdo3AWErGr",
-  render_errors: [view: MoneyTrackerWeb.ErrorView, accepts: ~w(json)],
+  render_errors: [accepts: ~w(json)],
   pubsub: [name: MoneyTracker.PubSub, adapter: Phoenix.PubSub.PG2],
   live_view: [signing_salt: "faJR1RZZ"]
 

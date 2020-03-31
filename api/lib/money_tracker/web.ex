@@ -59,7 +59,7 @@ defmodule MoneyTracker.Web do
     account_from = get_account(id_from)
     account_to = get_account(id_to)
 
-    if(account_from == nil || account_to == nil) do
+    if account_from == nil || account_to == nil do
       {:error, "Account not found."}
     else
       if account_from == account_to do

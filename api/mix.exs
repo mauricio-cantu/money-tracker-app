@@ -41,7 +41,8 @@ defmodule MoneyTracker.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:cors_plug, "~> 1.5"}
+      {:cors_plug, "~> 1.5"},
+      {:credo, "~> 1.2", only: [:dev, :test], runtime: false}
     ]
   end
 

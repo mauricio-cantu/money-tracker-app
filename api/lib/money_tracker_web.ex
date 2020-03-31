@@ -1,4 +1,8 @@
 defmodule MoneyTrackerWeb do
+  @moduledoc """
+  Money Tracker Web module.
+  """
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: MoneyTrackerWeb

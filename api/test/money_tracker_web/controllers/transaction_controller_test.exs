@@ -11,7 +11,7 @@ defmodule MoneyTrackerWeb.TransationControllerTest do
 
   @transactions_route "/transactions"
 
-  def fixture() do
+  def fixture do
     {:ok, account} = Web.create_account(@create_attrs)
     account
   end
@@ -32,7 +32,7 @@ defmodule MoneyTrackerWeb.TransationControllerTest do
           "value" => 50
         })
 
-      assert response(conn, 200)
+      assert response(conn, 201)
     end
 
     test "create transaction when one of the accounts doesn't exist", %{conn: conn} do

@@ -11,7 +11,7 @@ defmodule MoneyTrackerWeb.DepositControllerTest do
 
   @deposits_route "/deposits"
 
-  def fixture() do
+  def fixture do
     {:ok, account} = Web.create_account(@create_attrs)
     account
   end
@@ -26,7 +26,7 @@ defmodule MoneyTrackerWeb.DepositControllerTest do
           "value" => 50
         })
 
-      assert response(conn, 200)
+      assert response(conn, 201)
     end
 
     test "create deposit to unexisting account", %{conn: conn} do

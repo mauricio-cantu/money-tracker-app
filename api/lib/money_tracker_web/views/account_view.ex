@@ -11,8 +11,6 @@ defmodule MoneyTrackerWeb.AccountView do
   end
 
   def render("account.json", %{account: account}) do
-    %{id: account.id,
-      title: account.title,
-      balance: account.balance}
+    %{id: account.id, title: account.title, balance: account.balance}
   end
 end

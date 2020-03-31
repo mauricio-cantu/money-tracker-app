@@ -4,8 +4,6 @@ defmodule MoneyTrackerWeb.AccountController do
   alias MoneyTracker.Web
   alias MoneyTracker.Web.Account
 
-  action_fallback MoneyTrackerWeb.FallbackController
-
   @doc """
   Returns an account list.
   """
@@ -18,11 +16,17 @@ defmodule MoneyTrackerWeb.AccountController do
   Creates an account.
   """
   def create(conn, %{"account" => account_params}) do
-    with {:ok, %Account{} = account} <- Web.create_account(account_params) do
-      conn
-      |> put_status(:created)
-      |> put_resp_header("location", Routes.account_path(conn, :show, account))
-      |> render("show.json", account: account)
+    case Web.create_account(account_params) do
+      {:ok, %Account{} = account} ->
+        conn
+        |> put_status(:created)
+        |> put_resp_header("location", Routes.account_path(conn, :show, account))
+        |> render("show.json", account: account)
+
+      {:error, %Ecto.Changeset{}} ->
+        conn
+        |> put_status(:unprocessable_entity)
+        |> json(%{message: "Invalid information."})
     end
   end
 
@@ -33,7 +37,9 @@ defmodule MoneyTrackerWeb.AccountController do
     account = Web.get_account(id)
 
     if account == nil do
-      send_resp(conn, :not_found, "")
+      conn
+      |> put_status(:not_found)
+      |> json(%{message: "Account not found."})
     else
       render(conn, "show.json", account: account)
     end
@@ -45,8 +51,14 @@ defmodule MoneyTrackerWeb.AccountController do
   def update(conn, %{"id" => id, "account" => account_params}) do
     account = Web.get_account(id)
 
-    with {:ok, %Account{} = account} <- Web.update_account(account, account_params) do
-      render(conn, "show.json", account: account)
+    case Web.update_account(account, account_params) do
+      {:ok, %Account{} = account} ->
+        render(conn, "show.json", account: account)
+
+      {:error, %Ecto.Changeset{}} ->
+        conn
+        |> put_status(:unprocessable_entity)
+        |> json(%{message: "Invalid information."})
     end
   end
 

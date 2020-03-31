@@ -1,4 +1,8 @@
 defmodule MoneyTracker.Web.Account do
+  @moduledoc """
+  Account module.
+  """
+
   use Ecto.Schema
   import Ecto.Changeset
 
