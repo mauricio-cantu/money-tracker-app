@@ -1,5 +1,5 @@
 # Money Tracker App
-App to manage money accounts (create accounts, transactions and deposits).
+App to keep track of your money. Create accounts and make deposits and transactions between them.
 
 ## Techs
 
