@@ -1,4 +1,4 @@
-<h1 align="center">Money Tracker App</h1>
+<h1 align="center">Money Tracker App :money_with_wings::eyes:</h1>
 
 <p align="center">
   <a href="#question-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -8,7 +8,7 @@
 </p>
 
 ## :question: About
-Keep track os your money creating accounts and making deposits and transactions between them.
+Keep track of your money creating accounts and making deposits and transactions between them.
 
 ## :rocket: Techs
 
