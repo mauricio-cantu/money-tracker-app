@@ -10,6 +10,9 @@
 ## :question: About
 Keep track of your money creating accounts and making deposits and transactions between them.
 
+## :star: Demo
+![Money Tracker App Demo](https://github.com/mauricio-cantu/money-tracker-app/blob/master/frontend/public/Money-Tracker-app.gif)
+
 ## :rocket: Techs
 
   - [Elixir](https://elixir-lang.org/)
